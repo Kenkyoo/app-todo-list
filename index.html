@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App ToDo List</title>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
+    <!-- Sass -->
+     <link rel="stylesheet" href="/src/output.css">
+</head>
+<body>
+    <section class="vh-100 gradient-custom">
+        <div class="container py-5 h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col col-xl-10">
+      
+              <div class="card" style="border-radius: 15px;">
+                <div class="card-body p-5">
+      
+                  <h6 class="mb-3">Awesome Todo List</h6>
+      
+                  <form class="d-flex justify-content-center align-items-center mb-4">
+                    <div class="form-outline flex-fill">
+                      <input type="text" id="input" class="form-control form-control-lg" />
+                      <label class="form-label" for="form3">What do you need to do today?</label>
+                    </div>
+                    <button id="addButton" type="button" class="btn btn-primary btn-lg ms-2">Add</button>
+                  </form>
+      
+                  <ul id="list" class="list-group mb-0"></ul>
+      
+                </div>
+              </div>
+      
+            </div>
+          </div>
+        </div>
+      </section>
+      <script src="src/index.js"></script>
+</body>
+</html>
