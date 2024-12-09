@@ -22,13 +22,21 @@ function li (task) {
                 </a>
             </li>`);
 }
-    $('#addButton').click(function () {
-        const task = $('#input').val()
-        tasks.push(task);
-        savedLocalStorage();
-        li(task).appendTo('#list');        
-        $('#input').val(null);
-    });
+$('#addButton').click(function () {
+    const task = $('#input').val();
+    tasks.push(task);
+    savedLocalStorage();
+    li(task).appendTo('#list');        
+    $('#input').val(null);
+});
+
+// Evitar que el formulario se envíe cuando presionas enter
+$('#input').keydown(function (e) {
+    if (e.key === 'Enter') {
+        e.preventDefault(); // Evita la recarga de la página
+        $('#addButton').click(); // Llama a la función de agregar tarea
+    }
+});
 
 
     $(document).on('click', '.remove', function () {
